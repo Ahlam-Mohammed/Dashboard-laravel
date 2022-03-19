@@ -1,0 +1,9 @@
+<svg id="vuesax_linear_shield-tick" data-name="vuesax/linear/shield-tick" xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 96 96">
+  <g id="vuesax_linear_shield-tick-2" data-name="vuesax/linear/shield-tick">
+    <g id="shield-tick">
+      <path id="Vector" d="M28.32.93,8.36,8.45A13.879,13.879,0,0,0,0,20.49V50.21c0,4.72,3.12,10.92,6.92,13.76l17.2,12.84c5.64,4.24,14.92,4.24,20.56,0l17.2-12.84c3.8-2.84,6.92-9.04,6.92-13.76V20.49A13.889,13.889,0,0,0,60.44,8.41L40.48.93A20.339,20.339,0,0,0,28.32.93Z" transform="translate(13.64 7.99)" fill="none" stroke="#2db7ae" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+      <path id="Vector-2" data-name="Vector" d="M0,10.76,6.44,17.2,23.64,0" transform="translate(36.2 36.72)" fill="none" stroke="#2db7ae" stroke-linecap="round" stroke-linejoin="round" stroke-width="5"/>
+      <path id="Vector-3" data-name="Vector" d="M0,0H96V96H0Z" transform="translate(96 96) rotate(180)" fill="none" opacity="0"/>
+    </g>
+  </g>
+</svg>
