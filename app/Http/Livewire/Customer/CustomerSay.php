@@ -52,7 +52,7 @@ class CustomerSay extends Component
 
         $this->resetInput();
 
-        session()->flash('message', 'Created successfully.');
+        session()->flash('success', 'Created successfully.');
     }
 
     public function edit($id)
@@ -79,20 +79,40 @@ class CustomerSay extends Component
 
             $this->resetInput();
 
-            session()->flash('message', 'Updated successfully.');
+            session()->flash('success', 'Updated successfully.');
         }
     }
 
     public function isActive($id)
     {
         $record = $this->customerRepository -> getCustomerByID($id);
-        $this->is_active = $record->is_active === false ? true : false;
 
-        $this->customerService  -> setIsActive($this->is_active)
-                                -> updateIsActive($record);
+        $count = $this->customerRepository->getIsActive()->count();
+        if ($record->is_active === false)
+        {
+            if ($count < 1)
+            {
+                $this->is_active = true;
+                $this->customerService  -> setIsActive($this->is_active)
+                                        -> updateIsActive($record);
 
-        session()->flash('message', 'Active status updated.');
+                session()->flash('success', 'Active status updated.');
+            }
+            else
+            {
+                session()->flash('danger', 'There must be one active record');
+            }
+        }
+        else
+        {
+            $this->is_active = false;
+                $this->customerService  -> setIsActive($this->is_active)
+                                        -> updateIsActive($record);
+
+                session()->flash('success', 'Active status updated.');
+        }
     }
+
 
     public function destroy($id)
     {
@@ -102,7 +122,7 @@ class CustomerSay extends Component
             $this->customerService->delete($record);
         }
 
-        session()->flash('message', 'Deleted successfully');
+        session()->flash('success', 'Deleted successfully');
     }
 
 

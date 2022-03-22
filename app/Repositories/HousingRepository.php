@@ -16,5 +16,10 @@ class HousingRepository {
         return Housing::findOrFail($id);
     }
 
+    public function getIsActive()
+    {
+        return Housing::where('is_active', '=', true)->get();
+    }
+
 }
 

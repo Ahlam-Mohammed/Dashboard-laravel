@@ -16,5 +16,10 @@ class ServiceRepository {
         return Service::findOrFail($id);
     }
 
+    public function getIsActive()
+    {
+        return Service::where('is_active', '=', true)->get();
+    }
+
 }
 

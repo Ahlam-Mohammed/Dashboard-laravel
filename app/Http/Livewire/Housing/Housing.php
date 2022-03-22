@@ -63,7 +63,7 @@ class Housing extends Component
 
         $this->resetInput();
 
-        session()->flash('message', 'Created successfully.');
+        session()->flash('success', 'Created successfully.');
     }
 
     public function edit($id)
@@ -97,19 +97,39 @@ class Housing extends Component
 
             $this->resetInput();
 
-            session()->flash('message', 'Updated successfully.');
+            session()->flash('success', 'Updated successfully.');
         }
     }
+
 
     public function isActive($id)
     {
         $record = $this->housingRepository -> getHousingByID($id);
-        $this->is_active = $record->is_active === false ? true : false;
 
-        $this->housingService  -> setIsActive($this->is_active)
-                                -> updateIsActive($record);
+        $count = $this->housingRepository->getIsActive()->count();
+        if ($record->is_active === false)
+        {
+            if ($count < 3)
+            {
+                $this->is_active = true;
+                $this->housingService   -> setIsActive($this->is_active)
+                                        -> updateIsActive($record);
 
-        session()->flash('message', 'Active status updated.');
+                session()->flash('success', 'Active status updated.');
+            }
+            else
+            {
+                session()->flash('danger', 'There must be Tree active record');
+            }
+        }
+        else
+        {
+            $this->is_active = false;
+                $this->housingService   -> setIsActive($this->is_active)
+                                        -> updateIsActive($record);
+
+                session()->flash('success', 'Active status updated.');
+        }
     }
 
     public function destroy($id)
@@ -119,7 +139,7 @@ class Housing extends Component
             $record = $this->housingRepository->getHousingByID($id);
             $this->housingService->delete($record);
 
-            session()->flash('message', 'Deleted successfully');
+            session()->flash('success', 'Deleted successfully');
         }
     }
 

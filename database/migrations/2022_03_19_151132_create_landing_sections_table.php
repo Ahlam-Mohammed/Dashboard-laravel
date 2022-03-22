@@ -13,10 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('customer_says', function (Blueprint $collection) {
+        Schema::create('landing_sections', function (Blueprint $collection) {
             $collection->id();
-            $collection->string('comment');
-            $collection->string('imag');
+            $collection->string('title');
+            $collection->string('sub_title');
+            $collection->string('background');
             $collection->boolean('is_active')->default(false);
             $collection->timestamps();
         });
@@ -29,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('customer_says');
+        Schema::dropIfExists('landing_sections');
     }
 };

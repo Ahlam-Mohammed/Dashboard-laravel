@@ -18,8 +18,7 @@ return new class extends Migration
             $collection->string('title');
             $collection->string('description');
             $collection->string('icon');
-            $collection->boolean('is_active')->default(1);
-            $collection->boolean('is_deleted')->default(0);
+            $collection->boolean('is_active')->default(false);
             $collection->timestamps();
         });
     }

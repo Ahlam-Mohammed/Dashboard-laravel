@@ -27,7 +27,7 @@ class HousingService
                 'price'      => $this->price,
                 'period'     => $this->period,
                 'is_active'  => false,
-                // 'icon'        => $this->icon ? $this->icon : ServiceEnum::DEFAULT_IMAGE
+                // 'image'        => $this->icon ? $this->icon : ServiceEnum::DEFAULT_IMAGE
             ]);
 
         return response()->json([
@@ -45,7 +45,7 @@ class HousingService
                 'location'   => $this->location,
                 'price'      => $this->price,
                 'period'     => $this->period,
-                // 'icon'        => ($this->image??$icon->image)
+                // 'image'        => ($this->image??$icon->image)
             ]);
 
         return response()->json([
@@ -94,8 +94,7 @@ class HousingService
     public function setImage($image)
     {
         if($image){
-            // $this->icon = $image->store('services','public');
-            $this->icon = $image;
+            $this->image = $image;
         }
         return $this;
     }

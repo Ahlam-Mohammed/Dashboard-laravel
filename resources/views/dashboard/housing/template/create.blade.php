@@ -30,8 +30,11 @@ use App\Enum\ApartmentEnum;
     </div> --}}
 
     <div class="mt-4">
-        <label for="period" class="block text-sm text-gray-700 capitalize dark:text-gray-200">Select Type Housing ....</label>
+        <label for="period" class="block text-sm text-gray-700 capitalize dark:text-gray-200">Select Period ....</label>
         <select name="period" wire:model.defer='period' id="period" class="block w-full px-3 py-2 mt-2 text-gray-600 placeholder-gray-400 bg-white border border-gray-200 rounded-md focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-40">
+            <option selected>
+                Selected Period
+            </option>
             <option value="{{ ApartmentEnum::PERIOD_PER_WEEK }}">
                 {{ ApartmentEnum::PERIOD_PER_WEEK  }}
             </option>
@@ -48,6 +51,9 @@ use App\Enum\ApartmentEnum;
     <div class="mt-4">
         <label for="type" class="block text-sm text-gray-700 capitalize dark:text-gray-200">Select Type Housing ....</label>
         <select name="type" wire:model.defer='type' id="type" class="block w-full px-3 py-2 mt-2 text-gray-600 placeholder-gray-400 bg-white border border-gray-200 rounded-md focus:border-indigo-400 focus:outline-none focus:ring focus:ring-indigo-300 focus:ring-opacity-40">
+            <option selected>
+                Selected Type
+            </option>
             @foreach ($types as $type)
                 <option value="{{ $type->name }}">
                     {{ $type->name }}

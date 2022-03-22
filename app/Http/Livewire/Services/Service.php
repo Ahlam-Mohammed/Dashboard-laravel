@@ -55,7 +55,7 @@ class Service extends Component
 
         $this->resetInput();
 
-        session()->flash('message', 'Created successfully.');
+        session()->flash('success', 'Created successfully.');
     }
 
     public function edit($id)
@@ -84,19 +84,38 @@ class Service extends Component
 
             $this->resetInput();
 
-            session()->flash('message', 'Updated successfully.');
+            session()->flash('success', 'Updated successfully.');
         }
     }
 
     public function isActive($id)
     {
         $record = $this->serviceRepository -> getServiceByID($id);
-        $this->is_active = $record->is_active === false ? true : false;
 
-        $this->serviceService   -> setIsActive($this->is_active)
-                                -> updateIsActive($record);
+        $count = $this->serviceRepository->getIsActive()->count();
+        if ($record->is_active === false)
+        {
+            if ($count < 3)
+            {
+                $this->is_active = true;
+                $this->serviceService   -> setIsActive($this->is_active)
+                                        -> updateIsActive($record);
 
-        session()->flash('message', 'Active status updated.');
+                session()->flash('success', 'Active status updated.');
+            }
+            else
+            {
+                session()->flash('danger', 'There must be Three active record');
+            }
+        }
+        else
+        {
+            $this->is_active = false;
+                $this->serviceService   -> setIsActive($this->is_active)
+                                        -> updateIsActive($record);
+
+                session()->flash('success', 'Active status updated.');
+        }
     }
 
     public function destroy($id)
@@ -106,7 +125,7 @@ class Service extends Component
             $record = $this->serviceRepository->getServiceByID($id);
             $this->serviceService->delete($record);
 
-            session()->flash('message', 'Deleted successfully');
+            session()->flash('success', 'Deleted successfully');
         }
     }
 

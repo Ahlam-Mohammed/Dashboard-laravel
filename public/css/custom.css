@@ -1,0 +1,155 @@
+:root{
+    --main-color : #39667A;
+    --secondary-color : #7599A9;
+    --btn-color : #2DB7AE;
+    --bg-color : #EBF2F5;
+}
+
+body {
+    font-family: 'Rubik', sans-serif !important;
+    background-color: var(--bg-color);
+}
+
+.nav > li > a, h1,
+.intro p, article > h4,
+p.search ,.housing > a,
+.housing > h4,
+.service > h3{
+    color: var(--main-color);
+}
+
+article > h3 , p, span{
+    color: var(--secondary-color);
+}
+
+.span{
+    color: var(--btn-color);
+}
+
+.btn{
+    background-color: var(--btn-color);
+}
+
+.nav--mobile{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #ffffffd6;
+    height: 100vh;
+}
+
+.shadow--sm{
+    box-shadow: 0 4px 32px rgb(61, 105, 111, 5%)
+}
+
+.single_service{
+    background: linear-gradient(rgb(255, 255, 255, 45%),rgb(255, 255, 255, 80%), rgb(255, 255, 255, 80%));
+    box-shadow:0 8px 32px rgb(61, 105, 111, 8%);
+    width: 360px;
+    height: 460px;
+    padding-top: 70px;
+    padding-bottom: 75px;
+    border-radius: 20px;
+}
+
+.single_service--center{
+    height: 480px;
+}
+
+/*--- Service Section Responsive ----*/
+@media screen and (max-width: 1430px) and (min-width: 1239px)
+{
+    .single_service{
+        width: 300px;
+        height: 400px;
+        padding-top: 30px;
+    }
+    .single_service div{
+        padding:0 5px;
+    }
+    .single_service--center{
+        height: 420px;
+    }
+}
+@media screen and (max-width: 1239px) and (min-width: 1025px)
+{
+    .single_service{
+        width: 280px;
+        height: 380px;
+        padding-top: 10px;
+    }
+    .single_service div{
+        padding:0 5px;
+    }
+    .single_service--center{
+        height: 400px;
+    }
+    .single_service h3{
+        font-size: 22px
+    }
+    .single_service p{
+        font-size: 16px
+    }
+    .single_service img{
+        width:30%;
+    }
+}
+@media screen and (max-width: 1025px) and (min-width: 767px)
+{
+    .single_service{
+        width: 250px;
+        height: 340px;
+        padding-top: 10px;
+    }
+    .single_service--center{
+        height: 350px;
+    }
+    .single_service h3{
+        font-size: 20px
+    }
+    .single_service p{
+        font-size: 16px
+    }
+    .single_service img{
+        width:25%;
+    }
+}
+@media screen and (max-width: 767px)
+{
+    .single_service{
+        width: 90%;
+        height: 300px;
+        padding-top: 50px;
+    }
+    .single_service--center{
+        height: 300px;
+    }
+    .single_service h3{
+        font-size: 20px
+    }
+    .single_service p{
+        font-size: 16px
+    }
+    .single_service img{
+        width:25%;
+    }
+}
+
+
+/* Customer Say Section Responsive */
+@media screen and (max-width: 1920px) and (min-width: 1538px)
+{
+    .customer-say{
+        padding: 0 90px;
+    }
+}
+@media screen and (max-width: 1435px) and (min-width: 1000px)
+{
+    .person-3{
+        width: 15%; //width: 14.5%;
+    }
+    .person-1{
+        //width: 10.5%;
+    }
+}

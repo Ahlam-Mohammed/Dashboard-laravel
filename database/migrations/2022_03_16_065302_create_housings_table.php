@@ -21,8 +21,7 @@ return new class extends Migration
             $collection->double('price');
             $collection->string('period');
             $collection->string('image');
-            $collection->boolean('is_active')->default(1);
-            $collection->boolean('is_deleted')->default(0);
+            $collection->boolean('is_active')->default(false);
             $collection->timestamps();
         });
     }

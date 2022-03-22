@@ -30,6 +30,11 @@ Route::middleware(['auth'])->group(function () {
             return view('dashboard.index');
         })->name('dashboard.index');
 
+        Route::get('/landing', function () {
+            return view('dashboard.landing.index');
+        })->name('dashboard.landing');
+
+
         Route::get('/services', function () {
             return view('dashboard.services.index');
         })->name('dashboard.services');

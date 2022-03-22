@@ -12,5 +12,4 @@ class Housing extends Model
     protected $connection = 'mongodb';
     protected $collection = 'housing';
     protected $guarded = [];
-
 }

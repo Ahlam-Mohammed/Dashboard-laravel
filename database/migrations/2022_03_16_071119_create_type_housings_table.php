@@ -16,7 +16,6 @@ return new class extends Migration
         Schema::create('type_housings', function (Blueprint $collection) {
             $collection->id();
             $collection->string('name');
-            $collection->boolean('is_deleted')->default(0);
             $collection->timestamps();
         });
     }
