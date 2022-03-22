@@ -29,7 +29,6 @@ class CustomerSay extends Component
 
     public function render()
     {
-        // sleep(4);
         $this->customers = $this->customerRepository->getAll();
         return view('livewire.customer.customer-say');
     }

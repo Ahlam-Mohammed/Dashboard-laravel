@@ -8,7 +8,7 @@ class CustomerRepository {
 
     public function getAll()
     {
-        return CustomerSay::where('is_active',1)->first();
+        return CustomerSay::all();
     }
 
     public function getCustomerByID($id)

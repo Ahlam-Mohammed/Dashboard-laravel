@@ -4,7 +4,7 @@
 
 <!-- Content header -->
 <div class="flex items-center justify-between px-4 py-4 border-b lg:py-6 dark:border-primary-darker">
-    <h1 class="text-2xl font-semibold">Customer Say</h1>
+    <h1 class="text-2xl font-semibold">Customer say about our service</h1>
 
         {{-- Create Button --}}
         @include('components.dashboard.button-modal', ['name' => 'Create New Comment', 'title' => 'Create New Comment' ,'template' => 'customer.template.create'])

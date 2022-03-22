@@ -10,6 +10,6 @@ class CustomerSay extends Model
     use HasFactory;
 
     protected $connection = 'mongodb';
-    protected $collection = 'CustomerSay';
+    protected $collection = 'customer_says';
     protected $guarded = [];
 }

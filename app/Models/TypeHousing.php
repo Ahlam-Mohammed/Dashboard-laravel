@@ -10,6 +10,6 @@ class TypeHousing extends Model
     use HasFactory;
 
     protected $connection = 'mongodb';
-    protected $collection = 'TypeHousing';
+    protected $collection = 'type_housing';
     protected $guarded = [];
 }

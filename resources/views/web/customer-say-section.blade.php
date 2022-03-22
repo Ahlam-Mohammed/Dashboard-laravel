@@ -12,12 +12,14 @@
             <img class="person-6 absolute md:block hidden top-[113px] left-7 lg:z-0 -z-10" src="{{ asset('images/person6.png') }}" alt="person image">
         </div>
         <div>
-            <article class="relative md:w-[530.86px] w-11/12 h-[300px] m-auto rounded-[10px] shadow--sm" style="background: linear-gradient(rgb(255, 255, 255, 67%), rgb(255, 255, 255, 100%))">
-                <img class="absolute right-[37.9px] top-[32px]" src="{{ asset('images/message-favorite.svg') }}" alt="message-favorite icon">
-                <div class="sm:pt-[119px] sm:pb-[81px] sm:pr-[76.9px] sm:pl-[77px] pt-[90px] px-4">
-                    {{-- <p class="text-2xl text-center">{{ $comments->comment }}</p> --}}
-                </div>
-            </article>
+            @foreach ($comments as $comments)
+                <article class="relative md:w-[530.86px] w-11/12 h-[300px] m-auto rounded-[10px] shadow--sm" style="background: linear-gradient(rgb(255, 255, 255, 67%), rgb(255, 255, 255, 100%))">
+                    <img class="absolute right-[37.9px] top-[32px]" src="{{ asset('images/message-favorite.svg') }}" alt="message-favorite icon">
+                    <div class="sm:pt-[119px] sm:pb-[81px] sm:pr-[76.9px] sm:pl-[77px] pt-[90px] px-4">
+                        <p class="text-2xl text-center">{{ $comments->comment }}</p>
+                    </div>
+                </article>
+            @endforeach
         </div>
         <div class="relative">
             <img class="absolute right-[-1px] bottom-[33px] lg:z-0 -z-20" src="{{ asset('images/Vector-right.svg') }}" alt="Vector-left background">
