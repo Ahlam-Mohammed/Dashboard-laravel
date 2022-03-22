@@ -74,8 +74,8 @@
                         <p class="text-base sm:w-[176px] mt-[9px] leading-7">Main Building, Bandung
                             West Java, Indonesia </p>
                         <div class="flex items-center sm:justify-start justify-center gap-[15px] mt-[17px]">
-                            <img src="assets/images/icon/insta.svg" alt="instagram icon">
-                            <img src="assets/images/icon/twitter.svg" alt="twitter icon">
+                            <img src="{{ asset('images/insta.svg') }}" alt="instagram icon">
+                            <img src="{{ asset('images/twitter.svg') }}" alt="twitter icon">
                         </div>
                     </div>
                     <div class="sm:flex hidden gap-[99px] pt-16">

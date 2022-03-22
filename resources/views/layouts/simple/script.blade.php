@@ -22,9 +22,9 @@
             return !!window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         }
 
-        const setTheme = (value) => {
-            window.localStorage.setItem('dark', value)
-        }
+        // const setTheme = (value) => {
+        //     window.localStorage.setItem('dark', value)
+        // }
 
         const getColor = () => {
             if (window.localStorage.getItem('color')) {
@@ -84,19 +84,19 @@
 
         return {
             loading: true,
-            isDark: getTheme(),
-            toggleTheme() {
-                this.isDark = !this.isDark
-                setTheme(this.isDark)
-            },
-            setLightTheme() {
-                this.isDark = false
-                setTheme(this.isDark)
-            },
-            setDarkTheme() {
-                this.isDark = true
-                setTheme(this.isDark)
-            },
+            // isDark: getTheme(),
+            // toggleTheme() {
+            //     this.isDark = !this.isDark
+            //     setTheme(this.isDark)
+            // },
+            // setLightTheme() {
+            //     this.isDark = false
+            //     setTheme(this.isDark)
+            // },
+            // setDarkTheme() {
+            //     this.isDark = true
+            //     setTheme(this.isDark)
+            // },
             color: getColor(),
             selectedColor: 'cyan',
             setColors,

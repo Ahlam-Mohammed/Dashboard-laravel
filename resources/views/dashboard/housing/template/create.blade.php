@@ -1,6 +1,6 @@
 @php
 
-use App\Enum\ApartmentEnum;
+use App\Enum\HousingEnum;
 
 @endphp
 
@@ -35,14 +35,14 @@ use App\Enum\ApartmentEnum;
             <option selected>
                 Selected Period
             </option>
-            <option value="{{ ApartmentEnum::PERIOD_PER_WEEK }}">
-                {{ ApartmentEnum::PERIOD_PER_WEEK  }}
+            <option value="{{ HousingEnum::PERIOD_PER_WEEK }}">
+                {{ HousingEnum::PERIOD_PER_WEEK  }}
             </option>
-            <option value="{{ ApartmentEnum::PERIOD_PER_MONTH }}">
-                {{ ApartmentEnum::PERIOD_PER_MONTH  }}
+            <option value="{{ HousingEnum::PERIOD_PER_MONTH }}">
+                {{ HousingEnum::PERIOD_PER_MONTH  }}
             </option>
-            <option value="{{ ApartmentEnum::PERIOD_PER_YEAR }}">
-                {{ ApartmentEnum::PERIOD_PER_YEAR  }}
+            <option value="{{ HousingEnum::PERIOD_PER_YEAR }}">
+                {{ HousingEnum::PERIOD_PER_YEAR  }}
             </option>
         </select>
         @error('type') <span class="text-red-800 text-sm">{{ $message }}</span> @enderror
@@ -81,7 +81,7 @@ use App\Enum\ApartmentEnum;
 
 
     <div class="flex justify-end mt-6">
-        <button @click="modelOpen = false" wire:click.prevent="store()" class="px-3 py-2 text-sm tracking-wide text-white capitalize transition-colors duration-200 transform bg-indigo-500 rounded-md dark:bg-indigo-600 dark:hover:bg-indigo-700 dark:focus:bg-indigo-700 hover:bg-indigo-600 focus:outline-none focus:bg-indigo-500 focus:ring focus:ring-indigo-300 focus:ring-opacity-50">
+        <button @click="modelOpen = false" wire:click.prevent="store()"  class="px-3 py-2 text-sm tracking-wide text-white capitalize transition-colors duration-200 transform btn rounded-md  focus:outline-none 0 focus:ring focus:ring-opacity-50">
             Create
         </button>
     </div>

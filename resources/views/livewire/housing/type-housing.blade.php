@@ -55,7 +55,7 @@
                                 @include('components.dashboard.button-modal', ['name' => 'Update', 'title' => 'Update Type' , 'template' => 'housing.template.updateType', 'id' =>$type->_id])
 
                                 {{-- Delete Button --}}
-                                @include('components.dashboard.button-modal', ['name' => 'Deltet', 'title' => 'Delete Type' , 'template' => 'housing.template.delete', 'id' => $type->_id])
+                                @include('components.dashboard.button-modal', ['name' => 'Delete', 'title' => 'Delete Type' , 'template' => 'housing.template.delete', 'id' => $type->_id])
                             </div>
 
                         </td>

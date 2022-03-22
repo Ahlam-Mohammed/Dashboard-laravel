@@ -2,7 +2,7 @@
 
 namespace App\Enum;
 
-class ApartmentEnum
+class HousingEnum
 {
     const PERIOD_PER_WEEK   =  'Per Week';
     const PERIOD_PER_MONTH  =  'Per Month';

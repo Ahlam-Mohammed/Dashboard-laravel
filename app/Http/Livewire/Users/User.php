@@ -47,7 +47,7 @@ class User extends Component
 
         $this->resetInput();
 
-        session()->flash('message', 'Created successfully.');
+        session()->flash('success', 'Created successfully.');
     }
 
     public function edit($id)
@@ -74,7 +74,7 @@ class User extends Component
 
             $this->resetInput();
 
-            session()->flash('message', 'Updated successfully.');
+            session()->flash('success', 'Updated successfully.');
         }
     }
 
@@ -85,7 +85,7 @@ class User extends Component
             $record = Users::find($id);
             $this->userService->delete($record);
 
-            session()->flash('message', 'Deleted successfully');
+            session()->flash('success   ', 'Deleted successfully');
         }
     }
 

@@ -50,7 +50,7 @@
                 @include('components.dashboard.button-modal', ['name' => 'Update', 'title' => 'Update Housing' , 'template' => 'housing.template.update', 'id' => $x->_id])
 
                 {{-- Delete Button --}}
-                @include('components.dashboard.button-modal', ['name' => 'Deltet', 'title' => 'Delete Housing' , 'template' => 'housing.template.delete', 'id' => $x->_id])
+                @include('components.dashboard.button-modal', ['name' => 'Delete', 'title' => 'Delete Housing' , 'template' => 'housing.template.delete', 'id' => $x->_id])
             </div>
 
         </td>

@@ -21,7 +21,7 @@
             {{-- Sidebar --}}
             @include('components.dashboard.sidebar')
 
-            <div class="flex-1 h-full overflow-x-hidden overflow-y-auto">
+            <div class="flex-1 h-full overflow-x-hidden overflow-y-auto" style="background: linear-gradient(180deg, rgb(255,255,255,0%), rgb(255,255,255,100%))">
 
                 {{-- Header --}}
                 @include('layouts.simple.header')

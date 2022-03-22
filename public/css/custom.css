@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Rubik', sans-serif !important;
-    background-color: var(--bg-color);
+    background-color: var(--bg-color) !important;
 }
 
 .nav > li > a, h1,
@@ -27,7 +27,8 @@ article > h3 , p, span{
 }
 
 .btn{
-    background-color: var(--btn-color);
+    background-color: var(--btn-color) !important;
+    color: #fff !important;
 }
 
 .nav--mobile{
