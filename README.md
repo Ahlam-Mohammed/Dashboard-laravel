@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-# hello everyone ❤
+# Hello Everyone ❤
 
 ### How to setup
 
@@ -20,6 +20,8 @@ php artisan storage:link
 # after connect your database via .env file 
 php artisan migrate:fresh
 php artisan db:seed
+# run the project
+php artisan serve
 ```
 
 ### Credentials
@@ -30,11 +32,4 @@ dashboard : http://127.0.0.1:8000/dashboard
 login page : http://127.0.0.1:8000/login
 email : admin@gmail.com
 password : admin
-```
-
-
-### run the project 
-
-```bash
-  php artisan serv
 ```
