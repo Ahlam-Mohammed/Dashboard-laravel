@@ -28,6 +28,7 @@ php artisan serve
 
 ```php
 dashboard : http://127.0.0.1:8000/dashboard
+website : http://127.0.0.1:8000
 
 login page : http://127.0.0.1:8000/login
 email : admin@gmail.com
